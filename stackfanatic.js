@@ -46,7 +46,6 @@ function trySignIn() {
     if (enterEmail()) {
         setTimeout(function () {
             enterPassword();
-            console.log("entered password");
         }, 1000);
     }
 }
