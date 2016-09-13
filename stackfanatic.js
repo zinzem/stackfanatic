@@ -44,7 +44,6 @@ page.open(loginUrl, function(status) {
 
 function trySignIn() {
     if (enterEmail()) {
-        console.log("entered email");
         setTimeout(function () {
             enterPassword();
             console.log("entered password");
@@ -60,8 +59,10 @@ function enterEmail() {
         if (emailInput && nextButton) {
             emailInput.value = googleEmail;
             nextButton.click();
+            console.log("enter email sucess");
             return true;
         }
+        console.log("enter email failure");
         return false;
     }, googleEmail);
 }
@@ -74,6 +75,10 @@ function enterPassword() {
         if (passwordInput && signInButton) {
             passwordInput.value = googlePassword;
             signInButton.click();
+            console.log("enter password sucess");
+            return true;
         }
+        console.log("enter password failure");
+        return false;
     }, googlePassword);
 }
